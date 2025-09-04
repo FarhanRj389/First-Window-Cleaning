@@ -62,7 +62,7 @@ const Services = () => {
                 className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 relative overflow-hidden group"
               >
                 {service.badge && (
-                  <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="absolute top-1 right-1 lg:top-4 lg:right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                     {service.badge}
                   </div>
                 )}

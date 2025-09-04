@@ -82,17 +82,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden border-t border-gray-100 bg-white">
-              <nav className="py-4">
+            <div className="fixed inset-0 top-16 md:hidden bg-white z-40 overflow-y-auto">
+              <nav className="py-4 w-full">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     to={item.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className={`block px-4 py-3 text-sm font-medium transition-colors duration-200 ${
+                    className={`block w-full px-6 py-4 text-base font-medium transition-colors duration-200 ${
                       isActive(item.href)
-                        ? 'text-blue-600 bg-blue-50 border-r-2 border-blue-600'
-                        : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                        ? 'text-blue-600 bg-blue-50 border-r-4 border-blue-600'
+                        : 'text-gray-700 hover:bg-gray-50'
                     }`}
                   >
                     {item.name}
