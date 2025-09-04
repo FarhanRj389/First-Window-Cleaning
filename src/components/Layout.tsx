@@ -30,18 +30,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen bg-white ">
       {/* Header */}
-      <header className="bg-white h-20 shadow-sm border-b border-gray-100 sticky top-0 z-50 justify-between items-center px-20">
-        <div className="w-full h-20 mx-auto px-4 sm:px-6 lg:px-8 ">
-          <div className="flex h-20 justify-between items-center">
+      <header className="bg-white h-16 md:h-20 lg:h-20 shadow-sm border-b border-gray-100 sticky top-0 z-50 justify-between items-center px-4 lg:px-20">
+        <div className="w-full h-16 md:h-20 lg:h-20 mx-auto px-4 sm:px-6 lg:px-8 ">
+          <div className="flex h-16 md:h-20 lg:h-20 justify-between items-center">
             {/* Logo */}
             <Link 
               to="/" 
               className="flex items-center space-x-2 group"
             >
               <div className="p-2 bg-blue-600 rounded-lg group-hover:bg-blue-700 transition-colors duration-200">
-                <img src="/logo.png" alt="Logo" className='w-8 h-8'/>
+                <img src="/logo.png" alt="Logo" className='w-6 h-6 lg:w-8 lg:h-8'/>
               </div>
-              <span className="text-xl font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-200">
+              <span className="text-md lg:text-xl font-semibold text-gray-900  hover:text-blue-600 transition-colors duration-200">
                 First Window Cleaning
               </span>
             </Link>
@@ -65,7 +65,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </nav>
             <a
                 href="tel:0224012900"
-                className="inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-transparent hover:text-blue-600 hover:border-blue-600 hover:border transition-colors duration-200"
+                className="inline-flex items-center space-x-2 hidden md:inline-flex lg:inline-flex bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-transparent hover:text-blue-600 hover:border-blue-600 hover:border transition-colors duration-200"
               >
                 <Phone className="h-4 w-4" />
                 <span>022 401 2900</span>

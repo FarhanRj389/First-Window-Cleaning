@@ -35,9 +35,9 @@ const Home = () => {
 
   return (
     <div className='relative overflow-hidden'>
-      <div className='fixed w-full min-h-screen z-0'>
+      <div className='fixed w-full lg:min-h-screen h-full z-0'>
         <div className="absolute top-0 left-0 w-full h-full z-10 bg-black opacity-30"></div>
-        <img src="hero.webp" alt="Logo" className="w-full max-h-screen  object-cover top-1/2" />
+        <img src="hero.webp" alt="Logo" className="w-full md:max-h-screen h-full object-cover lg:object-cover  lg:top-1/2" />
       </div>
       {/* Hero Section */}
       <section className=" py-40 z-10 relative">
@@ -72,8 +72,8 @@ const Home = () => {
       <section className="py-20 bg-white z-10 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <div className=" rounded-2xl p-8 mb-16">
-            <h2 className="text-7xl font-bold text-gray-900 mb-14 text-center flex items-center justify-center">
+          <div className=" rounded-2xl p-8">
+            <h2 className="text-4xl lg:text-7xl font-bold text-gray-900 mb-14 text-center flex items-center justify-center">
               What&nbsp;<span className="text-blue-700 block">We Offer</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
