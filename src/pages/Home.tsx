@@ -34,15 +34,15 @@ const Home = () => {
   ];
 
   return (
-    <div>
+    <div className='relative overflow-hidden'>
+      <div className='fixed w-full min-h-screen z-0'>
+        <div className="absolute top-0 left-0 w-full h-full z-10 bg-black opacity-30"></div>
+        <img src="hero.webp" alt="Logo" className="w-full max-h-screen  object-cover top-1/2" />
+      </div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-white to-blue-50 py-40 relative overflow-hidden">
+      <section className=" py-40 z-10 relative">
 
-        <div className='absolute top-0 left-0 w-full h-full z-0'>
-          <div className="absolute top-0 left-0 w-full h-full z-10  bg-black opacity-20"></div>
-          <img src="hero.webp" alt="Logo" className="w-full h-full object-cover" />
-        </div>
-        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 z-20 relative">
+        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 ">
 
           <div className="text-center">
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -69,10 +69,10 @@ const Home = () => {
       </section>
 
       {/* Intro Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white z-10 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-          <div className="bg-gray-50 rounded-2xl p-8 mb-16">
+
+          <div className=" rounded-2xl p-8 mb-16">
             <h2 className="text-7xl font-bold text-gray-900 mb-14 text-center flex items-center justify-center">
               What&nbsp;<span className="text-blue-700 block">We Offer</span>
             </h2>
@@ -143,44 +143,45 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Why Choose Us */}
-          <div>
-            
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
-              Why Choose Us?
-            </h2>
-            <div className="text-center mb-12">
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              At First Window Cleaning, we bring clarity and brightness to your spaces.
-              With over 10 years of expertise, we are Auckland's trusted choice for
-              residential, commercial, and post-construction window care.
-            </p>
-          </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="text-center group hover:transform hover:scale-105 transition-all duration-200"
-                >
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4 group-hover:bg-blue-600 transition-colors duration-200">
-                    <feature.icon className="h-8 w-8 text-blue-600 group-hover:text-white transition-colors duration-200" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    {feature.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
+
         </div>
       </section>
 
+      {/* Why Choose Us */}
+      <div className='py-20 bg-black/10 z-10 relative'>
+        <h2 className="text-5xl font-bold text-white text-center mb-12">
+          Why Choose Us?
+        </h2>
+        <div className="text-center mb-12">
+          <p className="text-lg text-white max-w-4xl mx-auto leading-relaxed">
+            At First Window Cleaning, we bring clarity and brightness to your spaces.
+            With over 10 years of expertise, we are Auckland's trusted choice for
+            residential, commercial, and post-construction window care.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="text-center group hover:transform hover:scale-105 transition-all duration-200"
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4 group-hover:bg-blue-600 transition-colors duration-200">
+                <feature.icon className="h-8 w-8 text-blue-600 group-hover:text-white transition-colors duration-200" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">
+                {feature.title}
+              </h3>
+              <p className="text-white text-sm">
+                {feature.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Call-to-Action Section */}
-      <section className="py-16 bg-gray-900 border-white border-b">
+      <section className=" py-16 bg-gray-900 border-white border- z-10 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to brighten your view?
